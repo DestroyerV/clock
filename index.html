@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="clock-regular.svg" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/59873b0e8c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Clock Container-->
+    <div class="clock-container">
+      <div class="timezone">
+        <h3></h3>
+        <button id="timezone-butn" data-micromodal-trigger="modal-1">
+          <i class="fa-regular fa-pen-to-square fa-xl"></i>
+        </button>
+      </div>
+      <div class="time"><h1></h1></div>
+      <div class="date"></div>
+    </div>
+
+    <!--TimeZone Change Modal-->
+    <div class="modal" id="modal-1">
+      <div class="backdrop" tabindex="-1" data-micromodal-close>
+        <div class="timezone-modal">
+          <h2 id="modal-1-title">Change Timezone</h2>
+
+          <div class="input">
+            <div class="options">
+              <select name="timezone" id="">
+                <option value="" hidden>Pick a timezone</option>
+                <option value="Asia/Calcutta">Asia/Calcutta</option>
+                <option value="Europe/London">Europe/London</option>
+                <option value="America/New_york">America/New_york</option>
+              </select>
+            </div>
+            <button id="apply" data-micromodal-close>Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="node_modules/dayjs/dayjs.min.js"></script>
+    <script src="node_modules/dayjs/plugin/timezone.js"></script>
+    <script src="node_modules/dayjs/plugin/utc.js"></script>
+    <script src="node_modules/micromodal/dist/micromodal.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

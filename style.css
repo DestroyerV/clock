@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Madimi One", sans-serif;
+  font-style: italic;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.clock-container {
+  padding: 20px;
+  width: 315px;
+}
+
+.timezone {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 20px;
+  color: #c8cdd3;
+}
+#timezone-butn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.time h1 {
+  font-size: 80px;
+}
+
+.date {
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.backdrop {
+  position: fixed;
+  padding: 30px;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.timezone-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  background-color: white;
+  border: 3px solid black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+select {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#apply {
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  padding: 2px;
+  cursor: pointer;
+}

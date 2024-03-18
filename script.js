@@ -12,6 +12,7 @@ function changeTimezone() {
 
 apply.addEventListener("click", () => {
   changeTimezone();
+  MicroModal.close("modal-1");
 });
 
 setInterval(() => {
